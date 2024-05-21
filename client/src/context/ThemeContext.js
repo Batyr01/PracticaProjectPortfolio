@@ -12,7 +12,6 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-//custom hook
 const useTheme = () => useContext(ThemeContext);
 
 export { useTheme, ThemeProvider };

@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 const sendGridTransport = require("nodemailer-sendgrid-transport");
 
-//transport
 const transporter = nodemailer.createTransport(
   sendGridTransport({
     auth: {
@@ -14,18 +13,16 @@ const sendEmailController = (req, res) => {
   try {
     const { name, email, msg } = req.body;
 
-    //validation
     if (!name || !email || !msg) {
       return res.status(500).send({
         success: false,
         message: "Please Provide All Fields",
       });
     }
-    //email matter
     transporter.sendMail({
-      to: "typeyouremailadresshere@gmail.com",
-      from: "typeyouremailadresshere@gmail.com",
-      subject: "Regarding Mern Portfolio App",
+      to: "h.batyrkhan@gmail.com",
+      from: "h.batyrkhan04@gmail.com",
+      subject: "Portfoliodan",
       html: `
         <h5>Detail Information</h5>
         <ul>

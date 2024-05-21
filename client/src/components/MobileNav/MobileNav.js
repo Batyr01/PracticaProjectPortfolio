@@ -15,12 +15,10 @@ import "./MobileNav.css";
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
 
-  //handle open
   const handleOpen = () => {
     setOpen(!open);
   };
 
-  // handle menu clicks
   const handleMenuClick = () => {
     setOpen(false);
   };

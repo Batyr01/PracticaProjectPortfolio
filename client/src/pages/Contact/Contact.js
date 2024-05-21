@@ -10,7 +10,6 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  //handle submit button
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -22,7 +21,6 @@ const Contact = () => {
         email,
         msg,
       });
-      //validation success
       if (res.data.success) {
         toast.success(res.data.message);
         setname("");
